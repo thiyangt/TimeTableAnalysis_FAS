@@ -14,7 +14,9 @@ head(data_raw)
 colnames(data_raw)
 
 #### ---- save cleaned data
-data_raw$startting_time <- substr(data_raw$`Unit No.`, 1, 3)
+data_raw$subject_code <- substr(data_raw$`Unit No.`, 1, 3)
+data_raw$time_st <- substr(data_raw$Time, 1, 5)
+data_raw$time_am_pm <- substr(data_raw$Time, 15, 16)
 
 #### ---- adjusting time column
 
